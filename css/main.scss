@@ -1,0 +1,281 @@
+@import "_variables.scss";
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card {
+  width: 100%;
+  max-width: 412px;
+  height: 416px;
+  border-radius: 30px;
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  position: relative;
+  overflow: hidden;
+  margin-top: 6px;
+
+  .card__step_first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 32px 39px 32px 32px;
+    transition: all 0.2s ease;
+  }
+
+  &__header {
+    margin-bottom: 32px;
+
+    &_starbox {
+      width: 48px;
+      height: 48px;
+      background-color: $dark-blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+    }
+  }
+
+  &__content {
+    margin-bottom: 26px;
+
+    &_title {
+      color: $white;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 10px;
+    }
+
+    &_subtitle {
+      color: $light-grey;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+
+    &_btn {
+      width: 51px;
+      height: 51px;
+      background-color: $dark-blue;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 3px;
+
+      color: $medium-grey;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: $orange;
+        color: $white;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    height: 45px;
+    padding: 15px;
+    border-radius: 22.5px;
+    background-color: $orange;
+
+    color: $white;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: $white;
+      color: $orange;
+    }
+  }
+}
+
+.card__step_second {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 45px 40px 45px 32px;
+  transition: all 0.2s ease;
+
+  img {
+    margin-bottom: 32px;
+  }
+
+  .card__selected_box {
+    width: 193px;
+    height: 32px;
+    background-color: $dark-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22.5px;
+    margin-bottom: 33px;
+    margin-left: 8px;
+    margin-top: 1px;
+
+
+    &_title {
+      text-align: center;
+      color: $orange;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      margin-top: 2px;
+      margin-left: 1px;
+    }
+  }
+}
+
+.card__second_content {
+  text-align: center;
+
+  &_title {
+    color: $white;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-left: 8px;
+  }
+
+  &_text {
+    color: $light-grey;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .card {
+    max-width: 327px;
+    height: 360px;
+    border-radius: 15px;
+
+    .card__step_first {
+      padding: 24px 22px 32px 24px;
+    }
+
+    &__header {
+      margin-bottom: 16px;
+
+      &_starbox {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+
+    &__content {
+      margin-bottom: 24px;
+
+      &_title {
+        font-size: 24px;
+      }
+
+      &_subtitle {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    &__btns {
+      margin-bottom: 24px;
+
+      &_btn {
+        width: 42px;
+        height: 42px;
+        padding-top: 3px;
+
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.175px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: $orange;
+          color: $white;
+        }
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      height: 45px;
+      padding: 15px;
+
+      font-size: 14px;
+      letter-spacing: 1.867px;
+    }
+
+    .card__step_second {
+      padding: 34px 24px 37px 24px;
+
+      img {
+        width: 144px;
+        height: 96px;
+        margin-bottom: 24px;
+      }
+
+      .card__selected_box {
+        width: 168px;
+        height: 32px;
+        margin-bottom: 24px;
+        margin-left: 8px;
+        margin-top: 1px;
+
+
+        &_title {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          margin-top: 2px;
+          margin-left: 1px;
+        }
+      }
+    }
+
+    .card__second_content {
+
+      &_title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      &_text {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}

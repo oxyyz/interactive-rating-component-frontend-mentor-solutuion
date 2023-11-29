@@ -1,0 +1,58 @@
+// Colors
+
+// Primary
+$orange: hsl(25, 97%, 53%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $very-dark-blue;
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.card__btns_btn.active {
+    background-color: $medium-grey;
+    color: $white;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.transform-left {
+    transform: translateX(-100%);
+}
+
+.transform-0 {
+    transform: translateX(0) ;
+}
+
+.transform-right {
+    transform: translateX(100%) ;
+}
